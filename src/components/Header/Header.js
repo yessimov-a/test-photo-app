@@ -1,17 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import './Header.scss'
 
 const Header = () => {
     return (
         <div className="header">
-            <Link to="/" className="header__link">
+            <NavLink to="/" className="header__link">
                 Home
-            </Link>
-            <Link to="/search" className="header__link">
+            </NavLink>
+            <NavLink to="/search" activeStyle={{ backgroundColor: '#313843' }} className="header__link">
                 Search
-            </Link>
+            </NavLink>
         </div>
     )
 }
