@@ -1,0 +1,10 @@
+$homeBg: #19383d;
+
+.home-b {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: $homeBg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

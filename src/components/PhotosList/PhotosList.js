@@ -7,13 +7,11 @@ import { Link, useRouteMatch } from 'react-router-dom'
 
 const PhotosList = ({ list }) => {
     return (
-        <div>
-            <ul>
-                {list.map((photoData, i) => (
-                    <ListItem photoData={photoData} key={i} />
-                ))}
-            </ul>
-        </div>
+        <ul className="photos-list">
+            {list.map((photoData, i) => (
+                <ListItem photoData={photoData} key={i} />
+            ))}
+        </ul>
     )
 }
 
@@ -27,9 +25,9 @@ const ListItem = ({ photoData }) => {
     }
 
     return (
-        <li>
+        <li className="photos-list__item">
             <Link to={`${url}/photo/${photoData.id}`} onClick={handleClick}>
-                Photo
+                <img src={photoData.src.landscape} className="photos-list__img"/>
             </Link>
         </li>
     )

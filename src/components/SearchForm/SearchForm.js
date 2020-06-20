@@ -2,6 +2,8 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { setSearchInput, searchPhoto } from '../../actions/searchActions'
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import './SearchForm.scss'
 
@@ -36,6 +38,7 @@ const SearchForm = ({ isHomePage }) => {
                 className="search-form__submit"
                 onClick={handleSubmit}
             >
+                <FontAwesomeIcon icon={faSearch} className="search-form__icon" />
             </button>
         </form>
     )

@@ -4,6 +4,8 @@ import { Switch, Route } from 'react-router-dom'
 import { HomePage } from './views/HomePage'
 import { SearchPage } from './views/SearchPage'
 
+import './App.scss'
+
 const App = () => {
     return (
         <div>

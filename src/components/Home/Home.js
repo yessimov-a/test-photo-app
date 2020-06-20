@@ -14,7 +14,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div className="home-b">
             <SearchForm isHomePage={true} />
         </div>
     )

@@ -20,11 +20,13 @@ const Search = () => {
 
 
     return (
-        <div>
+        <div className="search-b">
             <SearchForm />
-            {searchFetching && <Fetching />}
-            {searchSuccess && <PhotosList list={photos} />}
-            {searchFailure && <Failure />}
+            <div className="search-b__list-wrapper">
+                {searchFetching && <Fetching />}
+                {searchSuccess && <PhotosList list={photos} />}
+                {searchFailure && <Failure />}
+            </div>
             <Switch>
                 <Route exact path={`${path}/photo/:id`}>
                     <Modal />

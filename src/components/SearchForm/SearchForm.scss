@@ -1,0 +1,35 @@
+$textColor: #232a34;
+$bgColor: #fff;
+
+.search-form {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    .search-form__input {
+        background: $bgColor;
+        padding: 18px;
+        border: none;
+        color: $textColor;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 5px 0 0 5px;
+        width: 50vw;
+        outline: none;
+    }
+    .search-form__submit {
+        background: $bgColor;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        font-size: 24px;
+        color: $textColor;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            background: $textColor;
+            color: $bgColor;
+            transition: 0.5s;
+        }
+    }
+}

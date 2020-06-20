@@ -3,7 +3,7 @@ import { SET_SEARCH_INPUT, SEARCH_FETCHING, SEARCH_FAILURE, SEARCH_SUCCESS } fro
 const initialState = {
     searchInput: '',
     photos: [],
-    searchFetching: true,
+    searchFetching: false,
     searchFailure: false,
     searchSuccess: false
 }
