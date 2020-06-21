@@ -12,10 +12,13 @@ const Header = () => {
             <div className="header-links">
                 <NavLink to="/search" activeStyle={{ backgroundColor: '#313843' }} className="header__link">
                     Search
-            </NavLink>
+                </NavLink>
                 <NavLink to="/favorites" activeStyle={{ backgroundColor: '#313843' }} className="header__link">
                     Favorites
-            </NavLink>
+                </NavLink>
+                <NavLink to="/history" activeStyle={{ backgroundColor: '#313843' }} className="header__link">
+                    History
+                </NavLink>
             </div>
         </div>
     )

@@ -6,6 +6,7 @@ import { SearchPage } from './views/SearchPage'
 import { FavoritesPage } from './views/FavoritesPage'
 
 import './App.scss'
+import { HistoryPage } from './views/HistoryPage'
 
 const App = () => {
     return (
@@ -20,6 +21,9 @@ const App = () => {
                 </Route>
                 <Route path="/favorites">
                     <FavoritesPage />
+                </Route>
+                <Route path="/history">
+                    <HistoryPage />
                 </Route>
             </Switch>
         </div>

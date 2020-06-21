@@ -1,4 +1,5 @@
-import { SET_SEARCH_INPUT, SEARCH_FETCHING, SEARCH_SUCCESS } from '../constants'
+import { SET_SEARCH_INPUT, SEARCH_FETCHING, SEARCH_SUCCESS, SEARCH_FAILURE } from '../constants'
+import { addHistoryPhoto } from './historyActions'
 
 export const setSearchInput = (payload) => ({
     type: SET_SEARCH_INPUT,
@@ -27,7 +28,13 @@ export const searchPhoto = (search) => {
             }
         })
             .then(res => res.json())
-            .then(data => dispatch(searchSuccess(data.photos)))
+            .then(data => {
+                dispatch(searchSuccess(data.photos))
+                dispatch(addHistoryPhoto({
+                    text: search,
+                    id: new Date().getTime()
+                }))
+            })
             .catch(err => dispatch(searchFailure(err)))
     }
 }
