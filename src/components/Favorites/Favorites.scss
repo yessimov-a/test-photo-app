@@ -1,0 +1,14 @@
+$searchBg: #19383d;
+
+.favorites-b {
+    padding: 80px 80px 0px 80px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: $searchBg;
+    text-align: center;
+    .favorites-title {
+        font-family: sans-serif;
+        font-size: 36px;
+        color: #fff;
+    }
+}

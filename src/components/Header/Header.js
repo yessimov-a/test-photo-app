@@ -9,9 +9,14 @@ const Header = () => {
             <NavLink to="/" className="header__link">
                 Home
             </NavLink>
-            <NavLink to="/search" activeStyle={{ backgroundColor: '#313843' }} className="header__link">
-                Search
+            <div className="header-links">
+                <NavLink to="/search" activeStyle={{ backgroundColor: '#313843' }} className="header__link">
+                    Search
             </NavLink>
+                <NavLink to="/favorites" activeStyle={{ backgroundColor: '#313843' }} className="header__link">
+                    Favorites
+            </NavLink>
+            </div>
         </div>
     )
 }

@@ -14,6 +14,10 @@ $headerHeight: 50px;
     background-color: $headerBg;
     justify-content: space-between;
     box-sizing: border-box;
+    .header-links {
+        display: flex;
+        height: 100%;
+    }
     .header__link {
         display: flex;
         align-items: center;

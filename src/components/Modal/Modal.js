@@ -1,15 +1,16 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { faTimes, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import './Modal.scss'
 import { useHistory } from 'react-router-dom';
+import { addFavorites, removeFavorites } from '../../actions/favoritesActions';
 
-const Modal = () => {
-
-    const [isActive, setIsActive] = useState(false)
+const Modal = ({ path, data }) => {
     const { modalData } = useSelector(state => state.modal)
+    const [isActive, setIsActive] = useState(checkPhoto(data, modalData.id))
+    const dispatch = useDispatch()
     const history = useHistory()
 
     useEffect(() => {
@@ -29,11 +30,17 @@ const Modal = () => {
     })
 
     const closeModal = () => {
-        history.replace(`/search`)
+        history.replace(`${path}`)
     }
-
+ 
     const handleLike = () => {
-        setIsActive(prevState => !prevState)
+        if (!isActive) {
+            dispatch(addFavorites(modalData))
+            setIsActive(prevState => !prevState)
+        } else {
+            dispatch(removeFavorites(modalData.id))
+            setIsActive(prevState => !prevState)
+        }
     }
 
     return (
@@ -59,6 +66,15 @@ const Modal = () => {
             </button>
         </div>
     )
+}
+
+function checkPhoto(arr, id) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].id === +id) {
+            return true;
+        }
+    }
+    return false
 }
 
 export {

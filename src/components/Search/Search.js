@@ -16,6 +16,7 @@ const Search = () => {
         searchFailure,
         searchFetching
     } = useSelector(state => state.search)
+    const { favoritesPhotos } = useSelector(state => state.favorites)
     const { path } = useRouteMatch()
 
 
@@ -29,7 +30,7 @@ const Search = () => {
             </div>
             <Switch>
                 <Route exact path={`${path}/photo/:id`}>
-                    <Modal />
+                    <Modal path={path} data={favoritesPhotos} />
                 </Route>
             </Switch>
         </div>
