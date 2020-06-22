@@ -62,7 +62,7 @@ const History = () => {
             <div className="history-content">
                 {historyFetching && <Fetching />}
                 {historySuccess && <PhotosList list={historyPhotos} />}
-                {historyFailure && <Failure />}
+                {historyFailure && <Failure color={`#232a34`}/>}
             </div>
             <Switch>
                 <Route exact path={`${path}/photo/:id`}>

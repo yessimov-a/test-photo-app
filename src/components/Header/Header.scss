@@ -32,3 +32,23 @@ $headerHeight: 50px;
         }
     }
 }
+
+@media (max-width: 600px) {
+    .header {
+        padding: 0;
+    }
+}
+
+@media (max-width: 390px) {
+    .header {
+        justify-content: space-around;
+        .header-links {
+            justify-content: space-evenly;
+            width: 100%;
+        } 
+        .header__link {
+            font-size: 12px;
+            padding: 0 10px;
+        }
+    }
+}

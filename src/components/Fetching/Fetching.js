@@ -4,8 +4,10 @@ import './Fetching.scss'
 
 const Fetching = () => {
     return (
-        <div>
-            Loading...
+        <div className="loading">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     )
 }

@@ -44,5 +44,17 @@
         background: #fff;
         display: flex;
         justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 890px) {
+    .history-b {
+        flex-direction: column;
+        .history-sidebar {
+            max-width: 100%;
+            background: #19383d;
+            display: flex;
+        }
     }
 }

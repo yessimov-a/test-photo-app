@@ -6,3 +6,9 @@ $searchBg: #19383d;
     box-sizing: border-box;
     background-color: $searchBg;
 }
+
+@media (max-width: 600px) {
+    .search-b {
+        padding: 80px 0px 0px 0px;
+    }
+}
