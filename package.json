@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,13 +19,14 @@
   "bugs": {
     "url": "https://github.com/yessimov-a/test-photo-app/issues"
   },
-  "homepage": "https://github.com/yessimov-a/test-photo-app#readme",
+  "homepage": "http://yessimov-a.github.io/test-photo-app",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "gh-pages": "^3.1.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "redux-thunk": "^2.3.0",
